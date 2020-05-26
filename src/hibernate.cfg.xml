@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlserver://localhost:1433;database=master;user=admin;password=haslo123;</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <mapping class="Database.AdministratorEntity"/>
+        <mapping class="Database.BiletEntity"/>
+        <mapping class="Database.FilmEntity"/>
+        <mapping class="Database.KlientKinaEntity"/>
+        <mapping class="Database.MiejsceEntity"/>
+        <mapping class="Database.SalaEntity"/>
+        <mapping class="Database.SeansEntity"/>
+        <mapping class="Database.UlgaEntity"/>
+        <mapping class="Database.ZajeteMiejscaEntity"/>
+        <mapping class="Database.ZamowienieEntity"/>
+        <mapping resource="AdministratorEntity.hbm.xml"/>
+        <mapping resource="BiletEntity.hbm.xml"/>
+        <mapping resource="FilmEntity.hbm.xml"/>
+        <mapping resource="KlientKinaEntity.hbm.xml"/>
+        <mapping resource="MiejsceEntity.hbm.xml"/>
+        <mapping class="Database.PracownikKinaEntity"/>
+        <mapping resource="PracownikKinaEntity.hbm.xml"/>
+        <mapping resource="SalaEntity.hbm.xml"/>
+        <mapping resource="SeansEntity.hbm.xml"/>
+        <mapping resource="UlgaEntity.hbm.xml"/>
+        <mapping resource="ZajeteMiejscaEntity.hbm.xml"/>
+        <mapping resource="ZamowienieEntity.hbm.xml"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

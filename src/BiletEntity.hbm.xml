@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.BiletEntity" table="Bilet" schema="dbo" catalog="master">
+        <id name="idBiletu" type="int">
+            <column name="idBiletu" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="idZamownia" class="Database.ZamowienieEntity" column="idZamownia"/>
+        <many-to-one name="idMiejsca" class="Database.MiejsceEntity" column="idMiejsca"/>
+        <many-to-one name="ulga" class="Database.UlgaEntity" column="ulga"/>
+        <many-to-one name="idSeansu" class="Database.SeansEntity" column="idSeansu"/>
+    </class>
+
+</hibernate-mapping>

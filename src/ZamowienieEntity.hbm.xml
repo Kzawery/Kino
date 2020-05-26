@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.ZamowienieEntity" table="Zamowienie" schema="dbo" catalog="master">
+        <id name="idZamowienia" type="int">
+            <column name="idZamowienia" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="idKlienta" class="Database.KlientKinaEntity" column="idKlienta"/>
+        <property name="Zakonczone" column="Zakonczone"/>
+    </class>
+</hibernate-mapping>

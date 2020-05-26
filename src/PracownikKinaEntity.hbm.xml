@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.PracownikKinaEntity" table="PracownikKina" schema="dbo" catalog="master">
+        <id name="idPracownika" type="int">
+            <column name="idPracownika" />
+            <generator class="native" />
+        </id>
+        <property name="sha1" column="sha1"/>
+        <property name="imie" column="imie"/>
+        <property name="nazwisko" column="nazwisko"/>
+        <property name="email" column="email"/>
+        <property name="rola" column="rola"/>
+    </class>
+</hibernate-mapping>

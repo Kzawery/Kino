@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.SeansEntity" table="Seans" schema="dbo" catalog="master">
+        <id name="idSeansu" type="int">
+            <column name="idSeansu" />
+            <generator class="native" />
+        </id>
+        <property name="czas">
+            <column name="czas" sql-type="smalldatetime" not-null="true"/>
+        </property>
+        <property name="cena">
+            <column name="cena" sql-type="money" not-null="true"/>
+        </property>
+        <many-to-one name="idSali" class="Database.SalaEntity" column="idSali"/>
+        <many-to-one name="idFilmu" class="Database.FilmEntity" column="idFilmu"/>
+    </class>
+</hibernate-mapping>

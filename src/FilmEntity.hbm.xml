@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.FilmEntity" table="Film" schema="dbo" catalog="master">
+        <id name="idFilmu" type="int">
+            <column name="idFilmu" />
+            <generator class="native" />
+        </id>
+        <property name="tytul" column="tytul"/>
+        <property name="rokProdukcji" column="rok_produkcji"/>
+        <property name="rezyser" column="rezyser"/>
+        <property name="gatunek" column="gatunek"/>
+        <property name="czasTrwania" column="czas_trwania"/>
+        <property name="opis" column="opis"/>
+    </class>
+</hibernate-mapping>
